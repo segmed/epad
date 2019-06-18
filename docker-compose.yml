@@ -1,5 +1,6 @@
 version: "3"
 services:
+
   mykeycloak:
     image: jboss/keycloak:latest
     environment:
@@ -16,6 +17,7 @@ services:
     volumes:
       - ./realm-export.json:/opt/jboss/keycloak/realm-export.json
       - ./realm-export_epad.json:/opt/jboss/keycloak/realm-export_epad.json
+
   mycouchdb:
     image: apache/couchdb:latest
     expose:
@@ -29,6 +31,7 @@ services:
         interval: 15s
         timeout: 15s
         retries: 15
+
   mydicomweb:
     image: rubinlab/dicomweb-server:latest
     expose:
@@ -40,6 +43,7 @@ services:
     depends_on:
      - mycouchdb
      - mykeycloak
+
   myepadlite:
     image: rubinlab/epadlite
     expose:
@@ -54,6 +58,7 @@ services:
      - mycouchdb
      - mydicomweb
      - mykeycloak
+
   myepadjs:
     image: rubinlab/epadjs:latest
     expose:
