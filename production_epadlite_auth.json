@@ -1,0 +1,5 @@
+{
+    "realm": "ePad",
+    "authServerUrl": "http://mykeycloak:8080",
+    "clientId": "epad-auth"
+}
