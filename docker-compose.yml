@@ -25,10 +25,10 @@ services:
     volumes:
       - ./couchdb:/opt/couchdb/data
     healthcheck:
-        test: ["CMD", "curl", "-f", "http://localhost:8888/"]
-        interval: 30s
-        timeout: 10s
-        retries: 5
+        test: ["CMD", "bash", "-c", "curl -f http://localhost:5984/ || exit 1"]
+        interval: 15s
+        timeout: 15s
+        retries: 15
   mydicomweb:
     image: rubinlab/dicomweb-server:latest
     expose:
@@ -37,7 +37,7 @@ services:
      - "8090:8090"
     volumes:
      - ./production_dicomweb.js:/config/development.js
-    links:
+    depends_on:
      - mycouchdb
      - mykeycloak
   myepadlite:
@@ -50,7 +50,7 @@ services:
      - ./production_epadlite.js:/config/development.js
      - ./production_epadlite_dicomweb.json:/config/dicomweb_none.json
      - ./production_epadlite_auth.json:/config/auth.json
-    links:
+    depends_on:
      - mycouchdb
      - mydicomweb
      - mykeycloak
@@ -63,7 +63,7 @@ services:
     volumes:
      - ./production_epadjs.json:/app/src/config.json
      - ./production_keycloak.json:/app/public/keycloak.json
-    links:
+    depends_on:
      - mycouchdb
      - mydicomweb
      - mykeycloak
