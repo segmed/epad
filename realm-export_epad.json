@@ -564,17 +564,17 @@
     {
       "id": "ffa758cc-9b23-4e68-9b9b-24cb77e9996f",
       "clientId": "epad-auth",
-      "rootUrl": "http://localhost:3000",
-      "adminUrl": "http://localhost:3000",
+      "rootUrl": "https://annotator.segmed.ai",
+      "adminUrl": "https://annotator.segmed.ai",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "http://localhost:3000/*"
+        "https://annotator.segmed.ai/*"
       ],
       "webOrigins": [
-        "http://localhost:3000"
+        "https://annotator.segmed.ai"
       ],
       "notBefore": 0,
       "bearerOnly": false,
