@@ -1,6 +1,5 @@
 version: "3"
 services:
-
   mykeycloak:
     image: jboss/keycloak:latest
     environment:
@@ -17,7 +16,8 @@ services:
     volumes:
       - ./realm-export.json:/opt/jboss/keycloak/realm-export.json
       - ./realm-export_epad.json:/opt/jboss/keycloak/realm-export_epad.json
-
+    depends_on:
+      - mycouchdb
   mycouchdb:
     image: apache/couchdb:latest
     expose:
@@ -27,13 +27,12 @@ services:
     volumes:
       - ./couchdb:/opt/couchdb/data
     healthcheck:
-        test: ["CMD", "bash", "-c", "curl -f http://localhost:5984/ || exit 1"]
-        interval: 15s
-        timeout: 15s
-        retries: 15
-
+      test: ["CMD", "curl", "-f", "http://localhost:5984"]
+      interval: 1m30s
+      timeout: 1m
+      retries: 10
   mydicomweb:
-    image: rubinlab/dicomweb-server:latest
+    image: rubinlab/dicomweb-server:beta 
     expose:
      - 8090
     ports:
@@ -41,11 +40,14 @@ services:
     volumes:
      - ./production_dicomweb.js:/config/development.js
     depends_on:
-     - mycouchdb
      - mykeycloak
-
+    healthcheck:
+      test: ["CMD", "pm2", "show", "DICOMwebServer"]
+      interval: 1m30s
+      timeout: 1m
+      retries: 10
   myepadlite:
-    image: rubinlab/epadlite
+    image: rubinlab/epadlite:beta
     expose:
      - 8080
     ports:
@@ -55,12 +57,14 @@ services:
      - ./production_epadlite_dicomweb.json:/config/dicomweb_none.json
      - ./production_epadlite_auth.json:/config/auth.json
     depends_on:
-     - mycouchdb
-     - mydicomweb
-     - mykeycloak
-
+     - myepadjs
+    healthcheck:
+      test: ["CMD", "pm2", "show", "ePADlite"]
+      interval: 1m30s
+      timeout: 1m
+      retries: 10
   myepadjs:
-    image: rubinlab/epadjs:latest
+    image: rubinlab/epadjs:beta
     expose:
      - 3000
     ports:
@@ -69,6 +73,4 @@ services:
      - ./production_epadjs.json:/app/src/config.json
      - ./production_keycloak.json:/app/public/keycloak.json
     depends_on:
-     - mycouchdb
      - mydicomweb
-     - mykeycloak

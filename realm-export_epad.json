@@ -564,17 +564,17 @@
     {
       "id": "ffa758cc-9b23-4e68-9b9b-24cb77e9996f",
       "clientId": "epad-auth",
-      "rootUrl": "https://annotator.segmed.ai",
-      "adminUrl": "https://annotator.segmed.ai",
+      "rootUrl": "http://epad-build.stanford.edu:3000",
+      "adminUrl": "http://epad-build.stanford.edu:3000",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "https://annotator.segmed.ai/*"
+        "http://epad-build.stanford.edu:3000/*"
       ],
       "webOrigins": [
-        "https://annotator.segmed.ai"
+        "http://epad-build.stanford.edu:3000"
       ],
       "notBefore": 0,
       "bearerOnly": false,

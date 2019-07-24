@@ -1,5 +1,5 @@
 {
     "realm": "ePad",
-    "authServerUrl": "http://mykeycloak:8080",
+    "authServerUrl": "http://epad-build.stanford.edu:8899",
     "clientId": "epad-auth"
 }
