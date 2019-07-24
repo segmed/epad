@@ -1,1 +1,269 @@
-{"TemplateContainer":{"xmlns":"gme://caCORE.caCORE/3.2/edu.northwestern.radiology.AIMTemplate","xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance","authors":"The AIM team","creationDate":"2011-07-10","description":"This template is used to collect annotations for RECIST evaluation","name":"VK Template","uid":"2.25.4369054530523.1305416222607.217635711999","version":"1","xsi:schemaLocation":"gme://caCORE.caCORE/3.2/edu.northwestern.radiology.AIMTemplate AIMTemplate_v2rv13.xsd","Template":[{"authors":"epaduser","codeMeaning":"Tumor assessment","codeValue":"RECIST","codingSchemeDesignator":"99EPAD","codingSchemeVersion":"1","creationDate":"2011-11-16","description":"Template used for RECIST measurements","name":"RECIST","uid":"2.25.158009446295858919844005670982612161979.0","version":"1.1","Component":[{"authors":"epaduser","explanatoryText":"Anatomic Location of lesion","id":"2.25.4369054531089.1305416223173.217635712047","itemNumber":1,"label":"Location","maxCardinality":1,"minCardinality":1,"shouldDisplay":true,"AnatomicEntity":{"annotatorConfidence":false},"AllowedTerm":[{"codeMeaning":"liver","codeValue":"RID58","codingSchemeDesignator":"RadLex"},{"codeMeaning":"pancreas","codeValue":"RID170","codingSchemeDesignator":"RadLex"},{"codeMeaning":"spleen","codeValue":"RID86","codingSchemeDesignator":"RadLex"},{"codeMeaning":"left lung","codeValue":"RID1326","codingSchemeDesignator":"RadLex"},{"codeMeaning":"right lung","codeValue":"RID1302","codingSchemeDesignator":"RadLex"},{"codeMeaning":"left upper lobe","codeValue":"RID1327","codingSchemeDesignator":"RadLex"},{"codeMeaning":"left lower lob","codeValue":"RID1338","codingSchemeDesignator":"RadLex"},{"codeMeaning":"right upper lobe","codeValue":"RID1303","codingSchemeDesignator":"RadLex"},{"codeMeaning":"right middle lobe","codeValue":"RID1310","codingSchemeDesignator":"RadLex"},{"codeMeaning":"right lower lobe","codeValue":"RID1315","codingSchemeDesignator":"RadLex"},{"codeMeaning":"left kidney","codeValue":"RID29663","codingSchemeDesignator":"RadLex"},{"codeMeaning":"right kidney","codeValue":"RID29662","codingSchemeDesignator":"RadLex"},{"codeMeaning":"brain","codeValue":"RID6434","codingSchemeDesignator":"RadLex"},{"codeMeaning":"peritoneal cavity","codeValue":"RID397","codingSchemeDesignator":"RadLex"},{"codeMeaning":"retroperitoneum","codeValue":"RID431","codingSchemeDesignator":"RadLex"},{"codeMeaning":"left adrenal gland","codeValue":"RID30325","codingSchemeDesignator":"RadLex"},{"codeMeaning":"right adrenal gland","codeValue":"RID30324","codingSchemeDesignator":"RadLex"},{"codeMeaning":"bladder","codeValue":"RID237","codingSchemeDesignator":"RadLex"},{"codeMeaning":"bone","codeValue":"RID13197","codingSchemeDesignator":"RadLex"},{"codeMeaning":"gallbladder","codeValue":"RID187","codingSchemeDesignator":"RadLex"},{"codeMeaning":"gastrointestinal tract","codeValue":"RID94","codingSchemeDesignator":"RadLex"},{"codeMeaning":"lymph node","codeValue":"RID13296","codingSchemeDesignator":"RadLex"},{"codeMeaning":"omentum","codeValue":"RID29251","codingSchemeDesignator":"RadLex"},{"codeMeaning":"left ovary","codeValue":"RID32830","codingSchemeDesignator":"RadLex"},{"codeMeaning":"right ovary","codeValue":"RID32829","codingSchemeDesignator":"RadLex"},{"codeMeaning":"pelvic cavity","codeValue":"RID2617","codingSchemeDesignator":"RadLex"},{"codeMeaning":"uterus","codeValue":"RID302","codingSchemeDesignator":"RadLex"},{"codeMeaning":"prostate","codeValue":"RID343","codingSchemeDesignator":"RadLex"}]},{"authors":"epaduser","explanatoryText":"Mass","id":"2.25.4369054531658.1305416223742.217635712095","itemNumber":2,"label":"Lesion","maxCardinality":1,"minCardinality":1,"shouldDisplay":true,"ImagingObservation":{"annotatorConfidence":false,"ImagingObservationCharacteristic":[{"annotatorConfidence":false,"authors":"epaduser","explanatoryText":"Type of lesion","id":"2.25.4369054532228.1305416224313.217635712143","itemNumber":1,"label":"Type","maxCardinality":1,"minCardinality":1,"shouldDisplay":true,"AllowedTerm":[{"codeMeaning":"target","codeValue":"S71","codingSchemeDesignator":"99EPAD"},{"codeMeaning":"non-target","codeValue":"S72","codingSchemeDesignator":"99EPAD"},{"codeMeaning":"new lesion","codeValue":"S73","codingSchemeDesignator":"99EPAD"},{"codeMeaning":"resolved lesion","codeValue":"S74","codingSchemeDesignator":"99EPAD"}]}]},"AllowedTerm":[{"codeMeaning":"Lesion Baseline Evaluation","codeValue":"S81","codingSchemeDesignator":"99EPAD"},{"codeMeaning":"Lesion Followup Evaluation","codeValue":"S82","codingSchemeDesignator":"99EPAD"}]},{"authors":"epaduser","explanatoryText":"Anatomic Status of cancer lesion","id":"2.25.4369054532800.1305416224885.217635712191","itemNumber":3,"label":"Status","maxCardinality":1,"minCardinality":1,"shouldDisplay":true,"AnatomicEntity":{"annotatorConfidence":false},"AllowedTerm":[{"codeMeaning":"tracked","codeValue":"S83","codingSchemeDesignator":"99EPAD"},{"codeMeaning":"not tracked","codeValue":"S84","codingSchemeDesignator":"99EPAD"}]}]}]}}
+{
+  "TemplateContainer": {
+    "xmlns": "gme://caCORE.caCORE/3.2/edu.northwestern.radiology.AIMTemplate",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "authors": "The AIM team",
+    "creationDate": "2011-07-10",
+    "description": "This template is used to collect annotations for RECIST evaluation",
+    "name": "VK Template",
+    "uid": "2.25.4369054530523.1305416222607.217635711999",
+    "version": "1",
+    "xsi:schemaLocation": "gme://caCORE.caCORE/3.2/edu.northwestern.radiology.AIMTemplate AIMTemplate_v2rv13.xsd",
+    "Template": [
+      {
+        "authors": "epaduser",
+        "codeMeaning": "Tumor assessment",
+        "codeValue": "RECIST",
+        "codingSchemeDesignator": "99EPAD",
+        "codingSchemeVersion": "1",
+        "creationDate": "2011-11-16",
+        "description": "Template used for RECIST measurements",
+        "name": "RECIST",
+        "uid": "2.25.158009446295858919844005670982612161979.0",
+        "version": "1.1",
+        "Component": [
+          {
+            "authors": "epaduser",
+            "explanatoryText": "Anatomic Location of lesion",
+            "id": "2.25.4369054531089.1305416223173.217635712047",
+            "itemNumber": 1,
+            "label": "Location",
+            "maxCardinality": 1,
+            "minCardinality": 1,
+            "shouldDisplay": true,
+            "AnatomicEntity": {
+              "annotatorConfidence": false
+            },
+            "AllowedTerm": [
+              {
+                "codeMeaning": "liver",
+                "codeValue": "RID58",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "pancreas",
+                "codeValue": "RID170",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "spleen",
+                "codeValue": "RID86",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "left lung",
+                "codeValue": "RID1326",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "right lung",
+                "codeValue": "RID1302",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "left upper lobe",
+                "codeValue": "RID1327",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "left lower lob",
+                "codeValue": "RID1338",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "right upper lobe",
+                "codeValue": "RID1303",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "right middle lobe",
+                "codeValue": "RID1310",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "right lower lobe",
+                "codeValue": "RID1315",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "left kidney",
+                "codeValue": "RID29663",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "right kidney",
+                "codeValue": "RID29662",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "brain",
+                "codeValue": "RID6434",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "peritoneal cavity",
+                "codeValue": "RID397",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "retroperitoneum",
+                "codeValue": "RID431",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "left adrenal gland",
+                "codeValue": "RID30325",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "right adrenal gland",
+                "codeValue": "RID30324",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "bladder",
+                "codeValue": "RID237",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "bone",
+                "codeValue": "RID13197",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "gallbladder",
+                "codeValue": "RID187",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "gastrointestinal tract",
+                "codeValue": "RID94",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "lymph node",
+                "codeValue": "RID13296",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "omentum",
+                "codeValue": "RID29251",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "left ovary",
+                "codeValue": "RID32830",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "right ovary",
+                "codeValue": "RID32829",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "pelvic cavity",
+                "codeValue": "RID2617",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "uterus",
+                "codeValue": "RID302",
+                "codingSchemeDesignator": "RadLex"
+              },
+              {
+                "codeMeaning": "prostate",
+                "codeValue": "RID343",
+                "codingSchemeDesignator": "RadLex"
+              }
+            ]
+          },
+          {
+            "authors": "epaduser",
+            "explanatoryText": "Mass",
+            "id": "2.25.4369054531658.1305416223742.217635712095",
+            "itemNumber": 2,
+            "label": "Lesion",
+            "maxCardinality": 1,
+            "minCardinality": 1,
+            "shouldDisplay": true,
+            "ImagingObservation": {
+              "annotatorConfidence": false,
+              "ImagingObservationCharacteristic": [
+                {
+                  "annotatorConfidence": false,
+                  "authors": "epaduser",
+                  "explanatoryText": "Type of lesion",
+                  "id": "2.25.4369054532228.1305416224313.217635712143",
+                  "itemNumber": 1,
+                  "label": "Type",
+                  "maxCardinality": 1,
+                  "minCardinality": 1,
+                  "shouldDisplay": true,
+                  "AllowedTerm": [
+                    {
+                      "codeMeaning": "target",
+                      "codeValue": "S71",
+                      "codingSchemeDesignator": "99EPAD"
+                    },
+                    {
+                      "codeMeaning": "non-target",
+                      "codeValue": "S72",
+                      "codingSchemeDesignator": "99EPAD"
+                    },
+                    {
+                      "codeMeaning": "new lesion",
+                      "codeValue": "S73",
+                      "codingSchemeDesignator": "99EPAD"
+                    },
+                    {
+                      "codeMeaning": "resolved lesion",
+                      "codeValue": "S74",
+                      "codingSchemeDesignator": "99EPAD"
+                    }
+                  ]
+                }
+              ]
+            },
+            "AllowedTerm": [
+              {
+                "codeMeaning": "Lesion Baseline Evaluation",
+                "codeValue": "S81",
+                "codingSchemeDesignator": "99EPAD"
+              },
+              {
+                "codeMeaning": "Lesion Followup Evaluation",
+                "codeValue": "S82",
+                "codingSchemeDesignator": "99EPAD"
+              }
+            ]
+          },
+          {
+            "authors": "epaduser",
+            "explanatoryText": "Anatomic Status of cancer lesion",
+            "id": "2.25.4369054532800.1305416224885.217635712191",
+            "itemNumber": 3,
+            "label": "Status",
+            "maxCardinality": 1,
+            "minCardinality": 1,
+            "shouldDisplay": true,
+            "AnatomicEntity": {
+              "annotatorConfidence": false
+            },
+            "AllowedTerm": [
+              {
+                "codeMeaning": "tracked",
+                "codeValue": "S83",
+                "codingSchemeDesignator": "99EPAD"
+              },
+              {
+                "codeMeaning": "not tracked",
+                "codeValue": "S84",
+                "codingSchemeDesignator": "99EPAD"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
