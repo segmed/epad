@@ -353,17 +353,17 @@
     {
       "id": "95fc821e-a1ef-458a-bfdb-fd25c2490320",
       "clientId": "fastify-webapp",
-      "rootUrl": "http://localhost:5985",
-      "adminUrl": "http://localhost:5985",
+      "rootUrl": "http://epad-build.stanford.edu:5985",
+      "adminUrl": "http://epad-build.stanford.edu:5985",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "http://localhost:5985/*"
+        "http://epad-build.stanford.edu:5985/*"
       ],
       "webOrigins": [
-        "http://localhost:5985"
+        "http://epad-build.stanford.edu:5985"
       ],
       "notBefore": 0,
       "bearerOnly": false,

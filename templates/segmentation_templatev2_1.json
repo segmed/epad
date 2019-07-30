@@ -1,0 +1,145 @@
+{
+  "TemplateContainer": {
+    "uid": "2.25.73865789221463805614224162339669641819",
+    "name": "Liver segmentation",
+    "authors": "Pritam",
+    "version": "1.0",
+    "creationDate": "2019-05-08",
+    "description": "Segmenting liver",
+    "xsi:schemaLocation": "gme://caCORE.caCORE/3.2/edu.northwestern.radiology.AIMTemplate AIMTemplate_v2rv13.xsd",
+    "xmlns": "gme://caCORE.caCORE/3.2/edu.northwestern.radiology.AIMTemplate",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "Template": [
+      {
+        "uid": "2.25.1580094462958589198440056709826121619790",
+        "name": "SEGOnly",
+        "authors": "dwillrett",
+        "version": "1.1",
+        "creationDate": "2011-11-16",
+        "description": "Template used for collecting only SEGs",
+        "codeMeaning": "SEG Only",
+        "codeValue": "SEG",
+        "codingSchemeDesignator": "SEG",
+        "codingSchemeVersion": "1.0",
+        "Component": [
+          {
+            "label": "Part",
+            "itemNumber": 0,
+            "authors": "Default User",
+            "explanatoryText": "What part of the liver is being segmented",
+            "minCardinality": 1,
+            "maxCardinality": 1,
+            "shouldDisplay": true,
+            "id": "2.25.308731779875454893724855094415453764018",
+            "ImagingObservation": {
+              "annotatorConfidence": false
+            },
+            "AllowedTerm": [
+              {
+                "codeValue": "RID58",
+                "codeMeaning": "liver",
+                "codingSchemeDesignator": "RadLex",
+                "codingSchemeVersion": "1.0",
+                "noMoreQuestions": "true"
+              },
+              {
+                "codeValue": "RID4",
+                "codeMeaning": "blood vessel",
+                "codingSchemeDesignator": "RadLex",
+                "codingSchemeVersion": "1.0",
+                "noMoreQuestions": "true"
+              },
+              {
+                "codeValue": "lesion",
+                "codeMeaning": "lesion",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              },
+              {
+                "codeValue": "RID28454",
+                "codeMeaning": "none",
+                "codingSchemeDesignator": "RadLex",
+                "codingSchemeVersion": "1.0",
+                "noMoreQuestions": "true"
+              }
+            ]
+          },
+          {
+            "label": "Malignancy score",
+            "itemNumber": 1,
+            "authors": "Default User",
+            "minCardinality": 0,
+            "maxCardinality": 1,
+            "shouldDisplay": true,
+            "id": "2.25.39349524745844595092030426213705965181",
+            "QuestionType": {
+              "codeValue": "malignancy_score",
+              "codeMeaning": "Please give a malignancy score to the lesion on a scale of 1 to 5 (1: benign, 5: malignant)",
+              "codingSchemeDesignator": "99PRIVATEQA",
+              "codingSchemeVersion": "1.0"
+            },
+            "Inference": {
+              "annotatorConfidence": false
+            },
+            "AllowedTerm": [
+              {
+                "codeValue": "1",
+                "codeMeaning": "LR-1: Definitely benign",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              },
+              {
+                "codeValue": "2",
+                "codeMeaning": "LR-2: Probably benign",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              },
+              {
+                "codeValue": "3",
+                "codeMeaning": "LR-3: Intermediate probability for HCC",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              },
+              {
+                "codeValue": "4",
+                "codeMeaning": "LR-4: Probably HCC",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              },
+              {
+                "codeValue": "5",
+                "codeMeaning": "LR-5: Definitely HCC",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              },
+              {
+                "codeValue": "6",
+                "codeMeaning": "LR-M: Probably malignant, not specific for HCC",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              },
+              {
+                "codeValue": "7",
+                "codeMeaning": "LR-TIV: Definitely tumour in vein",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              },
+              {
+                "codeValue": "8",
+                "codeMeaning": "LR-TR: Treated observation",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              },
+              {
+                "codeValue": "9",
+                "codeMeaning": "LR-NC: Not characterizable",
+                "codingSchemeDesignator": "liver_template_terms",
+                "codingSchemeVersion": "1.0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
